@@ -24,7 +24,7 @@ const container = document.querySelector('.container_fr')
 const playBtn = document.querySelector('.play_btn')
 
 //2
-reset();
+// reset();
 
 
 //3
@@ -82,9 +82,10 @@ function generateSquare(numSquare){
 function generatePlayBtn(){
 
   const btn = document.createElement('button');
+  btn.classList.add('btn', 'btn-secondary')
   btn.innerHTML = 'PLAY';
   btn.addEventListener('click', function(){
-    container.innerHTML = '';
+    reset();
     generateSquare()
   })
   return btn;

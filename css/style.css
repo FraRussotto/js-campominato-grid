@@ -16,7 +16,11 @@
 .container_fr{
   width: 600px;
   aspect-ratio: 1;
-  background-color: tomato;
+}
+
+.container_fr p{
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .square{
