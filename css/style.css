@@ -8,6 +8,7 @@
   height: 100vh;
   background-color: cadetblue;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

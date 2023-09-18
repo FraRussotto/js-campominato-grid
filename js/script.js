@@ -14,6 +14,10 @@
 
 //4 Creare un bottone che avvi la generazione del container con i quadrati al suo interno.
 
+//5 Trasformiamo la creazione del bottone in una funzione.
+
+//6 Inserisco la funzione che gener
+
 
 //1 
 const container = document.querySelector('.container_fr')
@@ -22,28 +26,30 @@ const playBtn = document.querySelector('.play_btn')
 //2
 reset();
 
+
 //3
-
-//4
-const btn = document.createElement('button');
-btn.innerHTML = 'Play';
-btn.addEventListener('click', function(){
-  container.innerHTML = '';
-  generateSquare()
-})
-playBtn.append(btn);
-
-
 // for(let i = 1; i <= 100; i++){
   // const square = addSquare(i);
   // square.addEventListener('click', function(){
-  // this.classList.toggle('clicked');
-  // square._indexSquare = (i)
-  // console.log(this._indexSquare)
-  // });
+    // this.classList.toggle('clicked');
+    // square._indexSquare = (i)
+    // console.log(this._indexSquare)
+    // });
+    
+    // container.append(square);
+    // }
+    
+//4
+  // const btn = document.createElement('button');
+  // btn.innerHTML = 'Play';
+  // btn.addEventListener('click', function(){
+  //   container.innerHTML = '';
+  //   generateSquare()
+  // })
+  // playBtn.append(btn);
+      
+playBtn.append(generatePlayBtn())
 
-  // container.append(square);
-// }
 
 // ------------ Function ------------ //
 
@@ -71,3 +77,15 @@ function generateSquare(numSquare){
     container.append(square);
   }
 }
+
+//5
+function generatePlayBtn(){
+
+  const btn = document.createElement('button');
+  btn.innerHTML = 'PLAY';
+  btn.addEventListener('click', function(){
+    container.innerHTML = '';
+    generateSquare()
+  })
+  return btn;
+};
