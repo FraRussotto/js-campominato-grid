@@ -3,3 +3,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.main_wrapper{
+  height: 100vh;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_fr{
+  width: 600px;
+  height: 600px;
+  background-color: tomato;
+}
+
+.square{
+  width: calc(100% / 10);
+  aspect-ratio: 1;
+  background-color: coral;
+  border: 2px solid whitesmoke;
+  cursor: pointer;
+}
+
+.square.clicked{
+  background-color: cadetblue;
+}
