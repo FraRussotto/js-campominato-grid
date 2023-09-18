@@ -35,6 +35,14 @@
   cursor: pointer;
 }
 
+.level_medium{
+  width: calc(100% / 9);
+}
+
+.level_hard{
+  width: calc(100% / 7);
+}
+
 .square.clicked{
   background-color: cadetblue;
 }
