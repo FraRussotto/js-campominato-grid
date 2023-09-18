@@ -14,9 +14,9 @@
 
 //4 Creare un bottone che avvi la generazione del container con i quadrati al suo interno.
 
-//5 Trasformiamo la creazione del bottone in una funzione.
+//5 Trasformo la creazione del bottone in una funzione.
 
-//6 Inserisco la funzione che gener
+//6 Inserisco la funzione che genera i quadrati all'interno del click del bottone, resettando il messaggio iniziale e creando l'area di gioco.
 
 
 //1 
@@ -84,9 +84,13 @@ function generatePlayBtn(){
   const btn = document.createElement('button');
   btn.classList.add('btn', 'btn-secondary')
   btn.innerHTML = 'PLAY';
+  
+  //6
+
   btn.addEventListener('click', function(){
     reset();
     generateSquare()
   })
+
   return btn;
 };
