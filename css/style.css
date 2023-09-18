@@ -14,7 +14,7 @@
 
 .container_fr{
   width: 600px;
-  height: 600px;
+  aspect-ratio: 1;
   background-color: tomato;
 }
 
