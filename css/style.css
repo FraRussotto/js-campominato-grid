@@ -19,9 +19,13 @@
 }
 
 .square{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: calc(100% / 10);
   aspect-ratio: 1;
   background-color: coral;
+  color: white;
   border: 2px solid whitesmoke;
   cursor: pointer;
 }
