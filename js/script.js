@@ -47,24 +47,14 @@ const playBtn = document.querySelector('.play_btn')
   //   generateSquare()
   // })
   // playBtn.append(btn);
-      
+  
   
   // Bonus: Inseriamo nell'html un selector con le 3 opzioni di difficoltà che determineranno attraverso il loro value, il numero degli square. Tramite il value creiamo uno switch con 3 case.
   
+  playBtn.append(generatePlayBtn())
   const level = document.querySelector('level').value;
-  let numSquare
+  let numSquare = 100;
   
-  if(level == 0){
-    numSquare = 100;
-  }else if(level == 1){
-    numSquare = 81;
-    square.classList.add('level_medium');
-  }else if(level == 2){
-    numSquare = 49;
-    square.classList.add('level_hard')
-  }
-  
-  playBtn.append(generatePlayBtn(10))
 
 
 // ------------ Function ------------ //
@@ -81,8 +71,9 @@ function addSquare(index){
 }
 
 //3 
-function generateSquare(numSquare){
-  for(let i = 1; i <= numSquare; i++){
+function generateSquare(){
+
+  for(let i = 1; i <= 100; i++){
     const square = addSquare(i);
 
     square.addEventListener('click', function(){
@@ -95,7 +86,7 @@ function generateSquare(numSquare){
 }
 
 //5
-function generatePlayBtn(numSquare){
+function generatePlayBtn(){
 
   const btn = document.createElement('button');
   btn.classList.add('btn', 'btn-secondary')
@@ -105,7 +96,7 @@ function generatePlayBtn(numSquare){
 
   btn.addEventListener('click', function(){
     reset();
-    generateSquare(numSquare)
+    generateSquare()
   })
 
   return btn;
