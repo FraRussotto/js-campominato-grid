@@ -1,17 +1,22 @@
 const main = document.querySelector('.game_wrapper');
 const playBtn = document.querySelector('#play')
 
-let numberSquare = 100;
+const levelSelected = document.querySelector('#level');
 
+const levels = [100, 81, 49]
+let numberSquare;
 
 
 playBtn.addEventListener('click', play);
 
+const listBomb = [];
 // ----- Function ----- //
 
 function play(){
+  numberSquare = levels[levelSelected.value]
   reset();
   generatePlayGrid();
+  randomListBomb(numberSquare)
 }
 
 function generatePlayGrid(){
@@ -28,12 +33,26 @@ function generatePlayGrid(){
 
 function createSquare(index){
   const square =  document.createElement('div');
-  square.classList.add('square', 'square100');
+  square.className = 'square';
+  square.classList.add('square' + numberSquare);
   square._squareID = index;
+  square.addEventListener('click', hendlerClickSquare)
 
   return square;
 }
 
+function hendlerClickSquare(){
+  this.classList.add('clicked');
+}
+
 function reset(){
   main.innerHTML = ''; 
+}
+
+function randomListBomb(index){
+  for(let i = 1; i <= 16; i++){
+    let randomNum = Math.ceil(Math.random() * index);
+    if(!listBomb.includes(randomNum)) listBomb.push(randomNum)
+  }
+  console.log(listBomb);
 }
